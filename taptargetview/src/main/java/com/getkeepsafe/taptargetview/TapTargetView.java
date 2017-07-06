@@ -85,7 +85,7 @@ public class TapTargetView extends View {
   @Nullable
   final ViewGroup boundingParent;
   final ViewManager parent;
-  final TapTarget target;
+  TapTarget target = null;
   final Rect targetBounds;
 
   final TextPaint titlePaint;
@@ -259,7 +259,7 @@ public class TapTargetView extends View {
   };
 
   final ValueAnimator expandAnimation = new FloatValueAnimatorBuilder()
-      .duration(250)
+      .duration(400)
       .delayBy(250)
       .interpolator(new AccelerateDecelerateInterpolator())
       .onUpdate(new FloatValueAnimatorBuilder.UpdateListener() {
@@ -277,7 +277,7 @@ public class TapTargetView extends View {
       .build();
 
   final ValueAnimator pulseAnimation = new FloatValueAnimatorBuilder()
-      .duration(1000)
+      .duration(1300)
       .repeat(ValueAnimator.INFINITE)
       .interpolator(new AccelerateDecelerateInterpolator())
       .onUpdate(new FloatValueAnimatorBuilder.UpdateListener() {
@@ -299,7 +299,7 @@ public class TapTargetView extends View {
       .build();
 
   final ValueAnimator dismissAnimation = new FloatValueAnimatorBuilder(true)
-      .duration(250)
+      .duration(400)
       .interpolator(new AccelerateDecelerateInterpolator())
       .onUpdate(new FloatValueAnimatorBuilder.UpdateListener() {
         @Override
