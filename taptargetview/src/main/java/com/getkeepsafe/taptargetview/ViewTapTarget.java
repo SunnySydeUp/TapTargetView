@@ -22,7 +22,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-class ViewTapTarget extends TapTarget {
+public class ViewTapTarget extends TapTarget {
   final View view;
 
   ViewTapTarget(View view, CharSequence title, @Nullable CharSequence description) {
