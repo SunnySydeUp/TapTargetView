@@ -25,7 +25,7 @@ import android.view.View;
 public class ViewTapTarget extends TapTarget {
   final View view;
 
-  ViewTapTarget(View view, CharSequence title, @Nullable CharSequence description) {
+  public ViewTapTarget(View view, CharSequence title, @Nullable CharSequence description) {
     super(title, description);
     if (view == null) {
       throw new IllegalArgumentException("Given null view to target");
