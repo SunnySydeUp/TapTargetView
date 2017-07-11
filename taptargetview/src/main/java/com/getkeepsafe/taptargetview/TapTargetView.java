@@ -668,6 +668,7 @@ public class TapTargetView extends View {
 
       if (descriptionLayout != null && titleLayout != null) {
         c.translate(0, titleLayout.getHeight() + TEXT_SPACING);
+        descriptionPaint.setAlpha(textAlpha);
         descriptionLayout.draw(c);
       }
     }
